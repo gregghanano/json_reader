@@ -1,4 +1,5 @@
 [
+
       {
                 "campaignName" : "Monster Legends (iOS) - iPad - US High Tier A",
                 "developer" : "SOCIAL POINT S.L.",
@@ -11,7 +12,7 @@
                 ],
                 "fixesNeeded" : [ ],
                 "campaign" : {
-                        "_id" : ObjectId("53105e55fade931a27000005"),
+                        "_id" : "53105e55fade931a27000005",
                         "type" : "cpi",
                         "network" : "mobile",
                         "platform" : "ios",
@@ -21,9 +22,9 @@
                         "hidden" : false,
                         "officeTest" : false,
                         "lastDaySpendRate" : 305000000,
-                        "created" : ISODate("2014-02-28T10:00:53.247Z"),
-                        "edited" : ISODate("2015-12-04T21:51:46.089Z"),
-                        "startDate" : ISODate("2014-02-28T09:00:45.010Z"),
+                        "created" : "2014-02-28T10:00:53.247Z",
+                        "edited" : "2015-12-04T21:51:46.089Z",
+                        "startDate" : "2014-02-28T09:00:45.010Z",
                         "endDate" : null,
                         "enabled" : true,
                         "name" : "Monster Legends (iOS) - iPad - US High Tier A",
@@ -188,7 +189,7 @@
                         "moderationStatus" : "approved",
                         "moderationStatusLog" : [
                                 {
-                                        "date" : ISODate("2014-02-28T12:32:09.505Z"),
+                                        "date" : "2014-02-28T12:32:09.505Z",
                                         "comment" : "Created and approved by Alfonso. Install tracking tested and OK.",
                                         "status" : "approved"
                                 }

@@ -25,7 +25,19 @@ app.get('/', function(req, res){
 app.get('/users/:name', function(req, res){
   var key = req.path.split('/')[2];
   console.log(key);
-  res.render('user', {user : obj[key], name: key});
+  var obj = {};
+  fs.readFile('./output.json','utf8', function(err,data){
+    console.log("reading file");
+    if(err) throw err;
+    for(var i in data){
+      if(data[i].amContact === key){
+        obj[key] = data[i].amContact;
+        obj.reason = data[i].reason;
+      }
+    }
+  })
+  console.log(obj);
+  //res.render('user', {user : obj[key], name: key});
 })
 
 app.listen(8000, function(){
