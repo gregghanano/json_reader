@@ -5,11 +5,11 @@
     <title></title>
   </head>
   <body>
-    <h1><%= name %>'s shiet</h1>
-    <a href='/'>Go back</a>
-    <% for (var i in user){ %>
-      <li><%= user[i]%></li>
-    <%}%>
+    <h1><%= user.name%>'s partially overlapping campaigns</h1> <a href='/'>Go back</a>
+    <% for(var i in user.userReasons){ %>
+      <tr><p><%= user.userReasons[i] %><br/></tr>
+      <hr>
 
+    <% } %>
   </body>
 </html>

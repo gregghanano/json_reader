@@ -7,14 +7,6 @@
   <body>
 
     <h1>Partially Overlapping Campaigns</h1>
-    <!-- <form action='/users' method='post'>
-      <select>
-        <% for (var i in users) { %>
-          <option value="<%=users[i]%>"><%= users[i] %></option>
-          <%  } %>
-      </select>
-      <input type='submit' value='submit'>
-    </form> -->
     <% for (var i in users) { %>
       <a href="/users/<%=users[i]%>"><%= users[i] %></a>
     <%  } %>
