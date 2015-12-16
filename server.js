@@ -16,7 +16,7 @@ app.get('/', function(req, res){
   //obj = JSON.parse(fs.readFileSync('output.json', 'utf8'));
   var namesLookUp ={};
   var amNames = [];
-  fs.readFile('./output.json','utf8', function(err,data){
+  fs.readFile('./overlaps.json','utf8', function(err,data){
     console.log("reading file");
     if(err) throw err;
     obj = JSON.parse(data);
