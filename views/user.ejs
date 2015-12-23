@@ -3,11 +3,19 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <script type='text/javascript' language='javascript' src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var string = $('.reasons').text();
+        // console.log(string);
+        $('.reasons').html(string + "<br/>");
+      })
+    </script>
   </head>
   <body>
     <h1><%= user.name%>'s partially overlapping campaigns</h1> <a href='/'>Go back</a>
     <% for(var i in user.userReasons){ %>
-      <tr><p><%= user.userReasons[i] %><br/></tr>
+      <tr><p class = 'reasons'><%= user.userReasons[i] %></p><br/></tr>
       <hr>
 
     <% } %>

@@ -36,27 +36,32 @@ app.get('/', function(req, res){
 })
 
 app.get('/users/:name', function(req, res){
-  console.log(obj);
+  // console.log(obj);
   var amName = req.path.split('/')[2];
-  console.log(amName);
+  // console.log(amName);
   var userObj = {};
   userObj.name = amName;
   userObj.userReasons = [];
+  var counter = 0;
   for(var i in obj){
     if(obj[i].amContact === amName){
-      console.log('yes! ' + amName);
-      console.log('reasons ' + obj[i].reasons.join(''));
+      console.log('yes! ' + amName+ ' '+ counter++);
+      // console.log('reasons ' + obj[i].reasons.join(''));
       userObj.userReasons.push(obj[i].reasons.join(''));
     }
   }
-  // for(var j = 0; j < userObj.userReasons.length; j++){
-  //   userObj.userReasons[j] = userObj.userReasons[j].replace(/<br\/\>/g, "/n");
-  //   userObj.userReasons[j] = userObj.userReasons[j].replace(/&nbsp;/g, " ");
-  //   userObj.userReasons[j] = userObj.userReasons[j].replace(/<p>/g, "");
-  //   userObj.userReasons[j] = userObj.userReasons[j].replace(/<\/p>/g,"");
-  // }
-  console.log("/////////////",userObj);
-  res.render('user', {user: userObj});
+  counter=0;
+  for(var j = 0; j < userObj.userReasons.length; j++){
+    //userObj.userReasons[j] = userObj.userReasons[j].replace(/<br\/\>/g, "/n");
+    // userObj.userReasons[j] = userObj.userReasons[j].replace(/&nbsp;/g, " ");
+    // userObj.userReasons[j] = userObj.userReasons[j].replace(/<p>/g, "");
+    // userObj.userReasons[j] = userObj.userReasons[j].replace(/<\/p>/g,"");
+    // userObj.userReasons[j] = userObj.userReasons[j].replace(/<p>/g, "").replace(/<\/p>/g,"").split('&nbsp;').join(' ').split('<br/>').join('\n');
+    // console.log(userObj.userReasons[j]);
+    userObj.userReasons[j] += "</p><hr>";
+  }
+  //console.log("/////////////",userObj);
+  //res.render('user', {user: userObj});
 })
 
 app.listen(8000, function(){
