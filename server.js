@@ -49,12 +49,12 @@ app.get('/users/:name', function(req, res){
       userObj.userReasons.push(obj[i].reasons.join(''));
     }
   }
-  for(var j = 0; j < userObj.userReasons.length; j++){
-    userObj.userReasons[j] = userObj.userReasons[j].replace(/<br\/\>/g, "/n");
-    userObj.userReasons[j] = userObj.userReasons[j].replace(/&nbsp;/g, " ");
-    userObj.userReasons[j] = userObj.userReasons[j].replace(/<p>/g, "");
-    userObj.userReasons[j] = userObj.userReasons[j].replace(/<\/p>/g,"");
-  }
+  // for(var j = 0; j < userObj.userReasons.length; j++){
+  //   userObj.userReasons[j] = userObj.userReasons[j].replace(/<br\/\>/g, "/n");
+  //   userObj.userReasons[j] = userObj.userReasons[j].replace(/&nbsp;/g, " ");
+  //   userObj.userReasons[j] = userObj.userReasons[j].replace(/<p>/g, "");
+  //   userObj.userReasons[j] = userObj.userReasons[j].replace(/<\/p>/g,"");
+  // }
   console.log("/////////////",userObj);
   res.render('user', {user: userObj});
 })
