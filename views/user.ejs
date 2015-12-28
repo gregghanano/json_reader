@@ -19,6 +19,9 @@
       <hr>
 
     <% } %>
+    <%= if(user.tooMany){ %>
+      <a href='/'>Previous 25<a><a href='/'>Next 25</a>
+    <% } %>
   </body>
 
 </html>
