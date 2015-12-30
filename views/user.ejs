@@ -14,12 +14,13 @@
   </head>
   <body>
     <h1><%= user.name%>'s partially overlapping campaigns</h1> <a href='/'>Go back</a>
+    <p>You have <%=user.count%> partially overlapping campaigns</p>
     <% for(var i in user.userReasons){ %>
       <tr><p class = 'reasons'><%= user.userReasons[i] %></p><br/></tr>
       <hr>
 
     <% } %>
-    <%= if(user.tooMany){ %>
+    <% if(user.tooMany){ %>
       <a href='/'>Previous 25<a><a href='/'>Next 25</a>
     <% } %>
   </body>

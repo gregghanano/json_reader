@@ -48,6 +48,7 @@ app.get('/users/:name', function(req, res){
       console.log('yes! ' + amName+ ' '+ counter++);
       // console.log('reasons ' + obj[i].reasons.join(''));
       userObj.userReasons.push(obj[i].reasons.join(''));
+      userObj.count = counter;
     }
   }
   counter=0;
@@ -55,11 +56,11 @@ app.get('/users/:name', function(req, res){
     userObj.userReasons[j] += "</p><hr>";
   }
   //console.log("/////////////",userObj);
-  var nextSet = [];
-  if(userObj.userReasons.length > 25){
-    nextSet = userObj.userReason.slice(0, 25);
-    userObj.tooMany = true;
-  }
+  // var nextSet = [];
+  // if(userObj.userReasons.length > 25){
+  //   nextSet = userObj.userReason.slice(0, 25);
+  //   userObj.tooMany = true;
+  // }
   res.render('user', {user: userObj});
 })
 
