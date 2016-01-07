@@ -38,7 +38,8 @@ app.get('/', function(req, res){
 app.get('/users/:name', function(req, res){
   // console.log(obj);
   var amName = req.path.split('/')[2];
-  // console.log(amName);
+  console.log(amName);
+  if(amName === "not%20set") amName = "not set";
   var userObj = {};
   userObj.name = amName;
   userObj.userReasons = [];
