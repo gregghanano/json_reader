@@ -8,17 +8,15 @@
       $(document).ready(function(){
         var string = $('.reasons').text();
         // console.log(string);
-        $('.reasons').html(string + "<input type='checkbox' name='finished' valed='fixed'>Fixed?");
+        $('.reasons').html(string + "<input type='checkbox' name='finished' value='fixed'>Fixed?");
       })
     </script>
   </head>
   <body>
     <h1><%= user.name%>'s partially overlapping campaigns</h1> <a href='/'>Go back</a>
     <p>You have <%=user.count%> partially overlapping campaigns</p>
-    <% for(var i in user.userReasons){ %>
-      <p class = 'reasons'><%= user.userReasons[i] %>
-        </p><br/>
-    <% } %>
+      <p class = 'reasons'><%= user.userReasons %>
+      </p><br/>
   </body>
 
 </html>
