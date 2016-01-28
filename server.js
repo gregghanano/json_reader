@@ -68,6 +68,3 @@ app.get('/users/:name', function(req, res){
 app.listen(8000, function(){
   console.log('listening on port 8000');
 })
-
-// db.installs.find({targetGame:67271,created:{$gt:ISODate("2015-11-30"), $lt:ISODate("2015-12-13")}},{_id:0,created:1,"identity.rawAdvertisingTrackingId":1,sourceGame:1, targetGame:1})
-// db.installs.find({campaignDeveloperId: 1423, targetGame:{$in: [82616,81633]}, created:{$gt:ISODate("2015-09-30")}},{_id:0, created:1, sourceGame:1,targetGame:1,"identity.rawAdvertisingTrackingId":1})
